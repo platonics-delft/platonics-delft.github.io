@@ -1,2 +1,217 @@
-Hello from the platonics.
-Hello from Max.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Fine Manipulation Skills from Demonstration">
+  <meta name="keywords" content="Robothon2023, Robothon, Learning, Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Platonics: Learning Fine Manipulation Skills from Demonstration</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="./images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./js/fontawesome.all.min.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/franzesegiovanni/ILoSA">
+            ILoSa
+          </a>
+          <a class="navbar-item" href="https://github.com/tud-amr/fabrics">
+            Fabrics
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Platonics: Robothon 2023</h1>
+          <h2 class="title is-4 publication-title">Learning fine manipulation from human demonstration</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/franzesegiovanni">Giovanni Franzese</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/maxspahn">Max Spahn</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/c-salmi">Chadi Salmi</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/MRamirez25">Mariano Ramirez</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Delft University of Technology,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/orgs/platonics-delft/repositories"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./assets/first_successful_run.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Platonics</span> with the first successful run
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--Philosophy. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Philosopy</h2>
+        <div class="content has-text-justified">
+          <p>
+            The examplary task for reducing electronic waste is a good chance
+            to showcase modern solution to robotic tasks, including perception,
+            control and motion planning.
+            Our solution to the Robothon 2023 Challenge is built on core three
+            core principles:
+            <ol>
+              <li>Designed for non-expert users</li>
+              <li>Respect humans</li>
+              <li>Robustness to uncertainty</li>
+            </ol> 
+          </p>
+          <p>
+            (Uncertainty-aware) Interactive Imitation Learning (IIL) is a
+            cutting-edge approach in robot manipulation that allows robots to
+            learn from human demonstrations while taking into account
+            uncertainty in the data and in the learned model. This approach is
+            particularly useful in scenarios where the environment is dynamic
+            and the robot must adapt to changes in its surroundings. It
+            combines the strengths of reinforcement learning, imitation
+            learning, and human guidance to teach robots complex tasks. By
+            incorporating uncertainty into the learning process, the robot can
+            better handle novel situations and avoid catastrophic failures. In
+            contrast to traditional imitation learning, where the robot is
+            simply copying the actions of the human demonstrator, IIL actively
+            seeks feedback and adjusts its behavior accordingly. This two-way
+            interaction between the robot and the human teacher allows for a
+            more efficient learning process. IIL has shown promising results in
+            a variety of tasks, including pick-and-place tasks, assembly tasks,
+            and disassembly tasks. One key advantage of IIL is its ability to
+            learn from human demonstrations that may be imperfect or
+            incomplete. As robots become increasingly integrated into our daily
+            lives, approaches like IIL will become essential for enabling safe
+            and efficient interactions between humans and machines.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Philosopy. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--Installation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Installation/Getting Started</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our solution to the robothon 2023 challenge is made fully
+            open-source to allow the community to build on top and further
+            improve our solution. All components are stored 
+            <a href="https://github.com/orgs/platonics-delft/repositories">
+               Platonics Delft</a>.
+            The components required are
+            <ol>
+              <li>Human Friendly Controller</li>
+              <li>Robothon23vision python package</li>
+              <li>Manipulation tasks</li>
+            </ol> 
+          </p>
+          <p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Installation. -->
+</section>
+
+
+</body>
+</html>
