@@ -112,6 +112,14 @@
                   </span>
                   <span>Code</span>
                   </a>
+                <a href="#software"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Quickstart</span>
+                  </a>
+                <a href="#hardware"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Hardware</span>
+                  </a>
               </span>
             </div>
           </div>
@@ -141,7 +149,7 @@
     <!--Philosophy. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Philosopy</h2>
+        <h2 class="title is-3">Philosophy</h2>
         <div class="content has-text-justified">
           <p>
             The examplary task for reducing electronic waste is a good chance
@@ -259,7 +267,7 @@
     <!--Resources. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Resources</h2>
+        <h2 id="hardware" class="title is-3">Resources</h2>
         <div class="content has-text-justified">
           <p>
             Our philosophy to robotics in human-shared environments requires
@@ -286,10 +294,10 @@
       </div>
     </div>
     <!--/ Resources. -->
-    <!--Installation. -->
+    <!--Software. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Installation/Getting Started</h2>
+        <h2 id="software" class="title is-3">Software Overview</h2>
         <div class="content has-text-justified">
           <p>
             Our solution to the robothon 2023 challenge is made fully
@@ -302,16 +310,117 @@
             <ol>
               <li><a href="https://github.com/platonics-delft/franka_control_robothon_challenge">Franka Cartesian Impedence Controller</a></li>
               <li><a href="https://github.com/platonics-delft/robothon23_vision">robothon23_vision</a></li>
-              <li><a href="https://github.com/platonics-delft/robothon23_vision">robothon23_gui</a></li>
-              <li><a href="https://github.com/platonics-delft/robothon23_vision">robothon_23_capabilities</a></li>
+              <li><a href="https://github.com/platonics-delft/robothon23_gui">robothon23_gui</a></li>
+              <li><a href="https://github.com/platonics-delft/robothon23_???">robothon_23_capabilities</a></li>
             </ol> 
           </p>
+        </div>
+        <h2 class="title is-3">Installation</h2>
+        <div class="content has-text-justified">
+          <h3><a
+              href="https://github.com/platonics-delft/franka_control_robothon_challenge">Franka
+              Cartesian Impedence Controller</a></h3>
           <p>
+          First, we need to install <em>libfranka</em> to communicate with the robot.
+          The library is publically available and can be installed in the
+          <em>$HOME</em> directory using the following commands.<br>
+          <code class="language-bash">
+            cd $HOME<br>
+            sudo apt install build-essential cmake git libpoco-dev
+            libeigen3-dev<br>
+            git clone --recursive https://github.com/frankaemika/libfranka<br>
+            cd libfranka<br>
+            mkdir build<br>
+            cd build<br>
+            cmake -DCMAKE_BUILD_TYPE=Release ..<br>
+            cmake --build .<br>
+          </code>
           </p>
+          <p>
+          In the next step, we install the ros-wrapper (we assume that you have
+          setup a a real-time kernel with ros) for the communication
+          with the robot.<br>
+          <code>
+            cd $HOME<br>
+            mkdir -p catkin_ws/src<br>
+            cd catkin_ws<br>
+            source /opt/ros/&ltros-distro&gt/setup.sh<br>
+            catkin_init_workspace src<br>
+            git clone --recursive https://github.com/frankaemika/franka_ros
+            src/franka_ros<br>
+            rosdep install --from-paths src --ignore-src --rosdistro
+            <ros-distro> -y --skip-keys libfranka<br>
+            source devel/setup.sh<br>
+          </code>
+          </p>
+          <p>
+          Finally, we can install the custom controller used by the Platonics in
+          the robothon 2023 using the following:<br>
+          <code>
+            roscd franka_ros<br>
+            git clone
+            git@github.com:platonics-delft/franka_control_robothon_challenge.git
+            <br>
+            roscd<br>
+            cd ..<br>
+            source /opt/ros/&ltros-distro&gt/setup.bash<br>
+            catkin_make -DMAKE_BUILD_TYPE=Release
+            -DFranka_DIR:PATH=~/libfranka/build<br>
+          </code>
+          </p>
+          <p>
+          You can now run the controller using<br>
+          <code>roslaunch franka_human_friendly_controllers\<br>
+            cartesian_variable_impedance_controller.launch robot_ip:=ROBOT_IP
+            load_gripper:=True<br>
+          </code>
+          </p>
+          <h3><a href="https://github.com/platonics-delft/robothon23_vision">robothon23_vision</a></h3>
+          <p>
+          The vision components are a pure python package and can be installed
+          using <em>pip</em>. This will automatically install the dependencies,
+          i.e. <code>opencv-python, scipy, numpy</code>.<br>
+          <code class="language-bash">
+            git clone git@github.com:platonics-delft/robothon23_vision.git<br>
+            cd robothon23_vision<br>
+            pip install .<br>
+          </code>
+          </p>
+          <h3><a
+              href="https://github.com/platonics-delft/robothon23_gui">robothon23_gui</a></h3>
+          <p>
+          The gui can be installed using:<br>
+          <code class="language-bash">
+            git clone git@github.com:platonics-delft/robothon23_gui.git<br>
+            cd robothon23_gui<br>
+            pip install .<br>
+          </code>
+          </p>
+          <h3><a
+              href="https://github.com/platonics-delft/robothon_23_platonics">ros
+              packages</a></h3>
+          <p>
+          Finally, all the ros related packages are located here. For example,
+          the trajectory manager and the active box_localization.<br>
+          <code class="language-bash">
+            sudo apt install ros-&ltros-distro&gt-realsense-ros<br>
+            cd $HOME/catkin_ws<br>
+            source devel/setup.bash<br>
+            cd src<br>
+            git clone git@github.com:platonics-delft/robotthon_23_platonics.git#debug-camera-feedback<br>
+            roscd<br>
+            cd ..<br>
+            catkin_make<br>
+            source devel/setup.bash<br>
+          </code>
+          </p>
+        </div>
+        <h2 class="title is-3">Getting Started</h2>
+        <div class="content has-text-justified">
         </div>
       </div>
     </div>
-    <!--/ Installation. -->
+    <!--/ Software. -->
     <!--Extras. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
