@@ -428,20 +428,25 @@
           </code>
           </p>
         </div>
-        <h2 class="title is-3">Getting started: Demonstrate, Correct, Generalize, Execute</h2>
-
-        <h2 class="title is-2">Record the template of the object in the current robot view </h2>
+        <h2 class="title is-3">Getting started</h2>
+        <h2 class="title is-5">Send the robot in home position </h2>
+        <p>
+          <code class="language-bash">
+            roslaunch franka_example_controllers move_to_start.launch robot_ip:=ROBOT_IP
+          </code>.
+          </p>
+        <h2 class="title is-5">Record the template of the object in the current robot view </h2>
         <p>
            To record and save the template that is going to be used to localized the object follow the instructions here: 
            <a href="https://github.com/platonics-delft/robothon23_gui/blob/main/README.md"> here</a>
      
          </p>    
-
+         <h2 class="title is-5">Kinesthetic Demonstration </h2>
         <div class="content has-text-justified">
           First of all we need to start the controller with
           <p>
           <code class="language-bash">
-            roslaunch frank_human_friendly_controllers cartesian_variable_impedance_controller.launch robot_ip:=ROBOT_IP
+            roslaunch franka_human_friendly_controllers cartesian_variable_impedance_controller.launch robot_ip:=ROBOT_IP
           </code>.
           </p>
           <p>
@@ -458,6 +463,7 @@
           python3 manipulation_tasks_panda/trajectory_manager/recording_trajectory.py "name skill"
           </code>.
           </p>  
+          <h2 class="title is-5">Execute Learned Skill </h2>
           <p>
           For executing the skill you can run 
           </p>  
@@ -491,6 +497,7 @@
           </p>  
           In this second case, the robot will first localize the object to match the template given during demonstration, trasform the skill in the new reference frame and then execute it. 
         </div>
+        <h2 class="title is-5">Give Corrections to the recorded Demonstration </h2>
         <p>
           During demonstration or during execution, it is possible to give feedback to the learned skill using the computer keybord. 
         <ul>
