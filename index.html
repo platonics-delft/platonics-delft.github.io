@@ -415,7 +415,7 @@
           </code>
           </p>
         </div>
-        <h2 class="title is-3">Getting Started</h2>
+        <h2 class="title is-3">Getting started: Demonstrate, Correct, Generalize, Execute</h2>
         <div class="content has-text-justified">
           First of all we need to start the controller with
           <p>
@@ -468,9 +468,57 @@
           roslaunch box_localization box_localization.launch 
           </code>
           </p>  
-          In this second case, the robot will first localize the object to match the template give during demonstration, trasform the skill in the new reference frame and the execute it. 
+          In this second case, the robot will first localize the object to match the template given during demonstration, trasform the skill in the new reference frame and then execute it. 
         </div>
-      </div>
+        <p>
+          During demonstration or during execution, it is possible to give feedback to the learned skill using the computer keybord. 
+        <ul>
+          <li>Press <b> e </b>  to stop the recording </li>
+        </ul>
+        <p>
+        Gripper commands:
+        <ul>
+          <li>Press <b> c</b> to close the gripper </li>
+          <li>Press <b> o </b> to open the gripper </li>
+        </ul>
+      </p>
+      <p>  
+        Camera feedback:
+        <ul>
+          <li>Press <b> k </b> to add a label to enable the camera feedback from that point in on </li>
+          <li>Press <b> l</b> to add a label to disable the camera feedback from that point in on</li>
+        </ul>
+      </p>
+      <p>
+        Haptic feedback:
+        <ul>
+          <li>Press <b> z</b> to add a label to enable the haptic feedback from that point in on</li>
+          <li>Press <b> x</b> to add a label to enable the haptic feedback from that point in on</li>
+        </ul>
+      </p>>
+        <p>  
+      The motivation of explictly labeling or disenabling the haptics and local camera feedback is because during a long trajectory the user can explictly teach the robot to use or not that skill. 
+      For example, it makes sense to have the haptic feedback only active when doing insertion tasks, such that the robot will not start spiraling when external force are perceived but they are not due to critical insertion tasks.   
+      </p>
+      
+      <p>
+       Directional feedback 
+        <ul>
+          <li>Press <b> w</b> to locally slightly shift the trajectory in positive x in robot frame </li>
+          <li>Press <b> s</b> to locally slightly shift the trajectory in negative x in robot frame</li>
+          <li>Press <b> a</b> to locally slightly shift the trajectory in positive y in robot frame</li>
+          <li>Press <b> d</b> to locally slightly shift the trajectory in negative y in robot frame</li>
+          <li>Press <b> u</b> to locally slightly shift the trajectory in positive z in robot frame</li>
+          <li>Press <b> j</b> to locally slightly shift the trajectory in negative z in robot frame</li>
+        </ul>
+      <p>
+      This feedback is useful when, after the demonstration, the robot will, for example, not press the button hard enough. However, by pressing j, the trajectory is locally modified and when executing again, the robot will apply enough force.    
+      </p> 
+      
+      <p>
+      At the end of every play back, the computer will ask if to overwrite the old trajectory or not. If the changes are accepted, the robot will remember the feedback in the next executions. 
+      </p>> 
+    </div>
     </div>
     <!--/ Software. -->
     <!--Extras. -->
