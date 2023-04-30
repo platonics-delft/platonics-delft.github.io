@@ -476,33 +476,34 @@
           <li>Press <b> e </b>  to stop the recording </li>
         </ul>
         <p>
-        Gripper commands:
+        <b> Gripper commands:</b>
         <ul>
           <li>Press <b> c</b> to close the gripper </li>
           <li>Press <b> o </b> to open the gripper </li>
         </ul>
       </p>
       <p>  
-        Camera feedback:
+        <b> Camera feedback: </b>
         <ul>
           <li>Press <b> k </b> to add a label to enable the camera feedback from that point in on </li>
           <li>Press <b> l</b> to add a label to disable the camera feedback from that point in on</li>
         </ul>
       </p>
       <p>
-        Haptic feedback:
+       <b> Haptic feedback: </b>
         <ul>
           <li>Press <b> z</b> to add a label to enable the haptic feedback from that point in on</li>
           <li>Press <b> x</b> to add a label to enable the haptic feedback from that point in on</li>
         </ul>
-      </p>>
+      </p>
         <p>  
       The motivation of explictly labeling or disenabling the haptics and local camera feedback is because during a long trajectory the user can explictly teach the robot to use or not that skill. 
-      For example, it makes sense to have the haptic feedback only active when doing insertion tasks, such that the robot will not start spiraling when external force are perceived but they are not due to critical insertion tasks.   
+      For example, it makes sense to have the haptic feedback only active when doing insertion tasks, such that the robot will not start spiraling when external forces are perceived but they are not due to critical insertion tasks.   
+      It is worth noticing, that if, no insertion task is perfomed, in case of large force, the robot would temporarly stop the execution of the motion, until the distrubance is gone. 
       </p>
       
       <p>
-       Directional feedback 
+       <b> Directional feedback </b>>
         <ul>
           <li>Press <b> w</b> to locally slightly shift the trajectory in positive x in robot frame </li>
           <li>Press <b> s</b> to locally slightly shift the trajectory in negative x in robot frame</li>
