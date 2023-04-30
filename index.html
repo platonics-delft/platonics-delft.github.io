@@ -418,21 +418,30 @@
         <h2 class="title is-3">Getting Started</h2>
         <div class="content has-text-justified">
           First of all we need to start the controller with
+          <p>
           <code class="language-bash">
             roslaunch frank_human_friendly_controllers cartesian_variable_impedance_controller.launch robot_ip:=ROBOT_IP
           </code>.
+           </p>
+          <p>
           Then we start the camera with
           <code class="language-bash">
             roslaunch trajectory_manager controller_camera.launch 
           </code>.
+          </p> 
+          <p>
           You can now record a demonstration with:
           <code class="language-bash">
           python3 manipulation_tasks_panda/trajectory_manager/recording_trajectory.py "name skill"
           </code>.
+          </p>  
+          <p>
           For executing the skill you can run 
           <code class="language-bash">
           python3 manipulation_tasks_panda/trajectory_manager/playback_trajectory.py "name skill"
           </code>.
+          </p>  
+          <p>
           To run all the skill in a ro, you can modify the manipulation_tasks_panda/trajectory_manager/playall.py according to the name of your skills. The you can run 
           <code class="language-bash">
           python3 manipulation_tasks_panda/trajectory_manager/playall.py 0
@@ -441,10 +450,12 @@
           <code class="language-bash">
           python3 manipulation_tasks_panda/trajectory_manager/playall.py 1
           </code>, otherwise.
+           <p> 
           The second command requires that you also launch the localization service with 
           <code class="language-bash">
           roslaunch box_localization box_localization.launch 
           </code>
+           </p>  
           In this second case, the robot will first localize the object to match the template give during demonstration, trasform the skill in the new reference frame and the execute it. 
         </div>
       </div>
