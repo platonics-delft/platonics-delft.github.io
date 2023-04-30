@@ -437,7 +437,7 @@
           </p>
         <h2 class="title is-5">Record the template of the object in the current robot view </h2>
         <p>
-           To record and save the template that is going to be used to localized the object follow the instructions here: 
+           To record and save the template that is going to be used later to localize the object follow the instructions: 
            <a href="https://github.com/platonics-delft/robothon23_gui/blob/main/README.md"> here</a>
      
          </p>    
@@ -462,6 +462,11 @@
           <code class="language-bash">
           python3 manipulation_tasks_panda/trajectory_manager/recording_trajectory.py "name skill"
           </code>.
+          </p>
+          During demonstration the robot is recording the Cartesian Pose of the robot and the current image from the camera for every time steps (the control freqeuncy is set to 20 Hz).
+           During execution, the robot track the recorded trajectory while trying to mismatch the discrepancy between the current image at that timestep and the one recorded during demonstration.
+           This will allow to increase reliability of critical picking and insertion tasks. 
+          </p>
           </p>  
           <h2 class="title is-5">Execute Learned Skill </h2>
           <p>
@@ -513,8 +518,8 @@
       <p>  
         <b> Camera feedback: </b>
         <ul>
-          <li>Press <b> k </b> to add a label to enable the camera feedback from that point in on </li>
-          <li>Press <b> l</b> to add a label to disable the camera feedback from that point in on</li>
+          <li>Press <b> k </b> to add a label to enable the local amera feedback from that point in on </li>
+          <li>Press <b> l</b> to add a label to disable the local camera feedback from that point in on</li>
         </ul>
       </p>
       <p>
@@ -527,7 +532,7 @@
         <p>  
       The motivation of explictly labeling or disenabling the haptics and local camera feedback is because during a long trajectory the user can explictly teach the robot to use or not that skill. 
       For example, it makes sense to have the haptic feedback only active when doing insertion tasks, such that the robot will not start spiraling when external forces are perceived but they are not due to critical insertion tasks.   
-      It is worth noticing, that if, no insertion task is perfomed, in case of large force, the robot would temporarly stop the execution of the motion, until the distrubance is gone. 
+      It is worth noticing, that if, no insertion task is perfomed, in case of large force, the robot would temporarly stop the execution of the motion, until the distrubance is gone. This increases safety when interacting with humans. 
       </p>
       
       <p>
