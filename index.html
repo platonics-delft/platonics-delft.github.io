@@ -272,6 +272,22 @@
       </div>
     </div>
     <!--/ Final Video. -->
+
+          <!-- Final Video. -->
+          <div class="column">
+            <h2 class="title is-3">Video Submission to Robothon 2023</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <p>
+                  5 rollouts for the Robothon competition 
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=tOC8P5Wv9Rk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
+    
+            </div>
+          </div>
+        </div>
+        <!--/ Final Video. -->
+
     </div>
 </section>
 
@@ -319,16 +335,14 @@
             <a href="https://github.com/orgs/platonics-delft">
                Platonics Delft</a>.
             You can find all required software components and links to their
-            installation guides below.
+            installation guides below. The first repo is the controller in Cpp and the second one is the python manipulation package. You can follow the instructions for the installation in the README.md of the two repositories.
             <ol>
               <li><a href="https://github.com/platonics-delft/franka_control_robothon_challenge">Franka Cartesian Impedence Controller</a></li>
-              <li><a href="https://github.com/platonics-delft/robothon23_vision">robothon23_vision</a></li>
-              <li><a href="https://github.com/platonics-delft/robothon23_gui">robothon23_gui</a></li>
-              <li><a href="https://github.com/platonics-delft/robothon23_manipulation">robothon_23_manipulation</a></li>
+              <li><a href="https://github.com/platonics-delft/robothon23_manipulation">Robothon Manipulation</a></li>
             </ol> 
           </p>
         </div>
-        <h2 class="title is-3">Installation</h2>
+        <!-- <h2 class="title is-3">Installation</h2>
         <div class="content has-text-justified">
           <h3><a
               href="https://github.com/platonics-delft/franka_control_robothon_challenge">Franka
@@ -383,30 +397,9 @@
           </p>
           <p>
           You can now run the controller using<br>
-          <code>roslaunch franka_human_friendly_controllers\<br>
+          <code>roslaunch franka_robothon_friendly_controllers\<br>
             cartesian_variable_impedance_controller.launch robot_ip:=ROBOT_IP
             load_gripper:=True<br>
-          </code>
-          </p>
-          <h3><a href="https://github.com/platonics-delft/robothon23_vision">robothon23_vision</a></h3>
-          <p>
-          The vision components are a pure python package and can be installed
-          using <em>pip</em>. This will automatically install the dependencies,
-          i.e. <code>opencv-python, scipy, numpy</code>.<br>
-          <code class="language-bash">
-            git clone git@github.com:platonics-delft/robothon23_vision.git<br>
-            cd robothon23_vision<br>
-            pip install .<br>
-          </code>
-          </p>
-          <h3><a
-              href="https://github.com/platonics-delft/robothon23_gui">robothon23_gui</a></h3>
-          <p>
-          The gui can be installed using:<br>
-          <code class="language-bash">
-            git clone git@github.com:platonics-delft/robothon23_gui.git<br>
-            cd robothon23_gui<br>
-            pip install .<br>
           </code>
           </p>
           <h3><a
@@ -427,32 +420,27 @@
             source devel/setup.bash<br>
           </code>
           </p>
-        </div>
-        <h2 class="title is-3">Getting started</h2>
-        <h2 class="title is-5">Send the robot in home position </h2>
-        <p>
-          <code class="language-bash">
-            roslaunch franka_example_controllers move_to_start.launch robot_ip:=ROBOT_IP
-          </code>.
-          </p>
-        <h2 class="title is-5">Record the template of the object in the current robot view </h2>
-        <p>
-           To record and save the template that is going to be used later to localize the object follow the instructions: 
-           <a href="https://github.com/platonics-delft/robothon23_gui/blob/main/README.md"> here</a>
-     
-         </p>    
+        </div> -->
+        <h2 class="title is-3">Getting started to demonstrate</h2>
+    
          <h2 class="title is-5">Kinesthetic Demonstration </h2>
         <div class="content has-text-justified">
           First of all we need to start the controller with
           <code class="language-bash">
-            roslaunch franka_human_friendly_controllers cartesian_variable_impedance_controller.launch robot_ip:=ROBOT_IP
+            roslaunch franka_robothon_friendly_controllers cartesian_variable_impedance_controller.launch robot_ip:=ROBOT_IP
           </code>.
           <p>
           Then we start the camera with
           <code class="language-bash">
             roslaunch box_localization camera.launch 
           </code>.
-          </p> 
+          </p>
+          <p>
+            Then we record a template with
+            <code class="language-bash">
+              python3 manipulation_tasks_panda/trajectory_manager/record_template.py "name_template"
+            </code>.
+            </p>
           <p>
           You can now record a demonstration with:
           </p>  
@@ -495,7 +483,7 @@
           </p>  
           <p>  
           <code class="language-bash">
-          roslaunch box_localization box_localization.launch 
+          roslaunch box_localization box_localization.launch template:='name_template'
           </code>
           </p>  
           In this second case, the robot will first localize the object to match the template given during demonstration, trasform the skill in the new reference frame and then execute it. 
