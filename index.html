@@ -324,7 +324,7 @@
             <li>Gripper inlet. <a href="./assets/finger_tips.STL" download>Download STL</a></li> 
 
             <li><a href="https://www.coolblue.nl/product/858939/intel-nuc-kit-nuc10i7fnhn2.html">Intel NUC kit NUC10i7FNHN2</a></li>
-            <li><a href="https://www.intelrealsense.com/depth-camera-d435/">Intel Realsense Camerea D435</a></li>
+            <li><a href="https://www.intelrealsense.com/depth-camera-d405/">Intel Realsense Camerea D405</a></li>
             <li>Camera mount. <a href="./assets/Camera_mount_realsense.STL" download>Download STL</a></li> 
           </ul></p>
           <p>
@@ -342,96 +342,24 @@
           <p>
             Our solution to the robothon 2023 challenge is made fully
             open-source to allow the community to build on top and further
-            improve our solution. All components are stored 
+            improve our solution. Most components are stored 
             <a href="https://github.com/orgs/platonics-delft">
                Platonics Delft</a>.
             You can find all required software components and links to their
-            installation guides below. The first repo is the controller in Cpp and the second one is the python manipulation package. You can follow the instructions for the installation in the README.md of the two repositories.
+            installation guides below. The first repo is the controller. Follow its instructions to install it on the host computer.
+            The remainder of packages must be cloned into the catkin workspace on the computer that is connected to the camera and to the robot by an ethernet connection.
             <ol>
-              <li><a href="https://github.com/platonics-delft/franka_control_robothon_challenge">Franka Cartesian Impedence Controller</a></li>
-              <li><a href="https://github.com/platonics-delft/robothon23_manipulation">Robothon Manipulation</a></li>
+              <li><a href="https://github.com/franzesegiovanni/franka_human_friendly_controllers">Franka Human Friendly Controllers</a></li>
+              <li><a href="https://github.com/platonics-delft/platonics_robot_teaching">Platonics Robot Teaching</a></li>
+              <li><a href="https://github.com/platonics-delft/panda-ros-py">Panda Utils</a></li>
+              <li><a href="https://github.com/platonics-delft/platonics_vision">Platonics Vision</a></li>
+              <li><a href="https://github.com/platonics-delft/platonics_dataset">Platonics Dataset</a></li>
+              <li><a href="https://github.com/platonics-delft/platonics_gui">Platonics GUI</a></li>
+              <li><a href="https://github.com/platonics-delft/platonics_tools">Platonics Tools</a></li>
             </ol> 
           </p>
         </div>
-        <!-- <h2 class="title is-3">Installation</h2>
-        <div class="content has-text-justified">
-          <h3><a
-              href="https://github.com/platonics-delft/franka_control_robothon_challenge">Franka
-              Cartesian Impedence Controller</a></h3>
-          <p>
-          First, we need to install <em>libfranka</em> to communicate with the robot.
-          The library is publically available and can be installed in the
-          <em>$HOME</em> directory using the following commands.<br>
-          <code class="language-bash">
-            cd $HOME<br>
-            sudo apt install build-essential cmake git libpoco-dev
-            libeigen3-dev<br>
-            git clone --recursive https://github.com/frankaemika/libfranka<br>
-            cd libfranka<br>
-            mkdir build<br>
-            cd build<br>
-            cmake -DCMAKE_BUILD_TYPE=Release ..<br>
-            cmake --build .<br>
-          </code>
-          </p>
-          <p>
-          In the next step, we install the ros-wrapper (we assume that you have
-          setup a a real-time kernel with ros) for the communication
-          with the robot.<br>
-          <code>
-            cd $HOME<br>
-            mkdir -p catkin_ws/src<br>
-            cd catkin_ws<br>
-            source /opt/ros/&ltros-distro&gt/setup.sh<br>
-            catkin_init_workspace src<br>
-            git clone --recursive https://github.com/frankaemika/franka_ros
-            src/franka_ros<br>
-            rosdep install --from-paths src --ignore-src --rosdistro
-            <ros-distro> -y --skip-keys libfranka<br>
-            source devel/setup.sh<br>
-          </code>
-          </p>
-          <p>
-          Finally, we can install the custom controller used by the Platonics in
-          the robothon 2023 using the following:<br>
-          <code>
-            roscd franka_ros<br>
-            git clone
-            git@github.com:platonics-delft/franka_control_robothon_challenge.git
-            <br>
-            roscd<br>
-            cd ..<br>
-            source /opt/ros/&ltros-distro&gt/setup.bash<br>
-            catkin_make -DMAKE_BUILD_TYPE=Release
-            -DFranka_DIR:PATH=~/libfranka/build<br>
-          </code>
-          </p>
-          <p>
-          You can now run the controller using<br>
-          <code>roslaunch franka_robothon_friendly_controllers\<br>
-            cartesian_variable_impedance_controller.launch robot_ip:=ROBOT_IP
-            load_gripper:=True<br>
-          </code>
-          </p>
-          <h3><a
-              href="https://github.com/platonics-delft/robothon23_manipulation">ros
-              packages</a></h3>
-          <p>
-          Finally, all the ros related packages are located here. For example,
-          the trajectory manager and the active box_localization.<br>
-          <code class="language-bash">
-            sudo apt install ros-&ltros-distro&gt-realsense-ros<br>
-            cd $HOME/catkin_ws<br>
-            source devel/setup.bash<br>
-            cd src<br>
-            git clone git@github.com:platonics-delft/robothon23_manipulation.git<br>
-            pip install -r robothon23_manipulation/requirements.txt <br>
-            cd ..<br>
-            catkin_make<br>
-            source devel/setup.bash<br>
-          </code>
-          </p>
-        </div> -->
+
         <h2 class="title is-3">Getting started to demonstrate</h2>
     
          <h2 class="title is-5">Kinesthetic Demonstration </h2>
