@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule ^(.*)$ https://platonics.nl/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^platonics.nl
+RewriteRule (.*) http://platonics.nl/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.platonics.nl
+RewriteRule (.*) https://platonics.nl/$1 [R=301,L]
+RewriteCond %{HTTPS_HOST} ^www.platonics.nl
+RewriteRule (.*) https://platonics.nl/$1 [R=301,L]
+RewriteCond www.platonics.nl
+RewriteRule (.*) https://platonics.nl/$1 [R=301,L]
