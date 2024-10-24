@@ -24,13 +24,7 @@ const metadata = {
         { text: 'Home', href: '#' },
         { text: 'About', href: '#about' },
         { text: 'Resume', href: '#resume' },
-        { text: 'Github', href: 'https://github.com/franzesegiovanni' },
-      ]}
-      actions={[
-        {
-          text: 'Website',
-          href: 'https://franzesegiovanni.github.io/aboutme/',
-        },
+        { text: 'Github', href: 'https://github.com/maxspahn' },
       ]}
       isSticky
       showToggleTheme
@@ -41,15 +35,25 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Giovanni Franzese"
-    tagline="Manipulation Researcher (Ph.D.)"
-    actions={[{ variant: 'primary', text: 'Contact me', href: getPermalink('/contact#form') }]}
+    title="Max Spahn"
+    tagline="Research Scientist (Ph.D.)"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact me',
+        href: 'mailto:m.spahn@tudelft.nl'
+      },
+      {
+        variant: 'secondary',
+        text: 'Geometric Fabrics',
+        href: 'https://github.com/tud-amr/fabrics'
+      },
+    ]}
   >
     <Fragment slot="subtitle">
-      My name is Giovanni and I am a Postdoctoral researcher in Robotics @ TU Delft in the Netherlands. I am currently seeking
-      for a Research Scientist position in Robotics and Machine Learning. I have more than 5 years of experience in Robotics
-      and Machine Learning, with a focus on robot manipulation, learning from
-      human demonstration, and Bayesian machine learning
+      I am Max Spahn and I am currently a Postdoctoral researcher in Robotics @
+      TU Delft in the Netherlands. My focus is trajectory generation and
+      reactive motion planning for robotics in the presence of obstacles.
     </Fragment>
   </Hero>
 
@@ -66,15 +70,15 @@ const metadata = {
           target: '_blank',
           text:
           'Google Scholar',
-          href: 'https://scholar.google.com/citations?hl=nl&user=F1weUA8AAAAJ',
+          href: 'https://scholar.google.com/citations?user=r5MT42cAAAAJ&hl=en&oi=ao',
         },
       },
       {
         icon: 'tabler:brand-linkedin',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
-          href: 'https://www.linkedin.com/in/giovanni-franzese/',
+          text: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/max-spahn/',
         },
       },
       {
@@ -82,12 +86,12 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Github',
-          href: 'https://github.com/franzesegiovanni',
+          href: 'https://github.com/maxspahn',
         },
       },
     ]}
     image={{
-      src: '~/assets/images/giovanni.png',
+      src: '~/assets/images/max.jpeg',
       alt: 'Colorful Image',
       loading: 'eager',
     }}
@@ -95,22 +99,17 @@ const metadata = {
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
       <p>
-        I am passionate about developing algorithms that enable robots to learn complex manipulation tasks from human
-        demonstration and feedback. I have experience in programming real robot controllers and fitting machine learning
-        models.My controllers for Franka-Emika robots are deployed in my different university around the world and supporting
-        research of scientistis and students. I am a team player and I enjoy working in a multidisciplinary environment. I am
-        looking for a position where I can apply my skills and knowledge to develop innovative solutions for real-world problems
-        in robotics and machine learning.
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        While my research focus in applied differential geometry for trajectory
+        generation, my passion for software development and my eager to 
+        compete with the best researchers in competitive robotics has led me
+        join the Platonics.
       </p>
-      <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        During my Ph.D. @ TU Delft, I have been working mainly on model
+        predictive control and geometric fabrics for motion planning. 
+        Due to the project funding, I applied the developed methods for retail
+        environments.
       </p>
-      <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -126,14 +125,14 @@ const metadata = {
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+          'Research Scientist <br /> <span class="font-normal">ABB Research</span> <br /> <span class="text-sm font-normal">01/2025 - Present</span>',
+          description: ``,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Ph.D. Candidate <br /> <span class="font-normal">Delft University of Technology, Delft, Netherlands</span> <br /> <span class="text-sm font-normal">01/2020 - 12/2024</span>',
+          description: `<b>Thesis</b>: Trajectory Generation beyond Model Predictive Control (Defense November 2024)<br> Reactive trajectory generation for high-dimensional robots  <br>Using the geometry of the robot’s configuration space to generate consistent <br>Combining several research projects into a proof-of-concept demonstration in supermarket automation`,
         icon: 'tabler:briefcase',
       },
     ]}
@@ -147,11 +146,11 @@ const metadata = {
     title="Education"
     items={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        title: `Master of Science in Mechanical Engineering <br /> <span class="font-normal">RWTH Aachen, Germany</span> <br /> <span class="text-sm font-normal">09/2013 - 11/2019</span>`,
         icon: 'tabler:school',
       },
       {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        title: `Master of General Engineering <br /> <span class="font-normal">École Central Supélec, Paris, France</span> <br /> <span class="text-sm font-normal">07/2015 - 09/2017</span>`,
         icon: 'tabler:school',
       },
     ]}
@@ -160,77 +159,5 @@ const metadata = {
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
-    title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
-    columns={3}
-    defaultIcon="tabler:point-filled"
-    items={[
-      {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
-      },
-      {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
-      },
-      {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
-      },
-      {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
-      },
-      {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
-      },
-      {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
-    ]}
-  />
 
-  <!-- Content Widget **************** -->
-
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    title="Let's teach robots together"
-    subtitle="Ready to teach a robot yourself?"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Contact me',
-        href: getPermalink('/contact#form'),
-      },
-    ]}
-  />
-
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id="blog"
-    title="Explore my insightful articles on my blog"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
 </Layout>
