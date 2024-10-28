@@ -6,6 +6,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import Features2 from '~/components/widgets/Features2.astro';
 import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -24,19 +25,21 @@ const metadata = {
   <Hero
     tagline="European Robotics Forum 2022"
     actions={[
-      { text: 'Learn more', href: 'https://lp.franka.de/news/franka-emika-hosts-hackathon-at-european-robotics-forum-2022' },
+      { text: 'Learn more', href: 'https://sites.google.com/view/eurobin-msvc/' },
     ]}
+    image={{ src: '~/assets/images/msvc_team_picture.jpg', alt: 'European Robotics Forum 2022' }}
   >
     <Fragment slot="title">
       The <span class="text-accent dark:text-white highlight">Platonics</span>
-      were born and won the first competition
+      won the euROBIN Manipulation Skill Versatility Challenge at IROS 2024.
     </Fragment>
 
     <Fragment slot="subtitle">
-      During that competition, the team was able to demonstrate the capabilities
-      of the approach in combination with the hardware. The task consisted of 
-      several insertion tasks and key turning tasks.
+      The team from TU Delft won the competition with their innovative approach to the challenge.
+      Our approach was awarded for its versatility and adaptability to different manipulation tasks.
     </Fragment>
+
+    <!-- insert image -->
 
     <Fragment slot="image">
       <YouTube id="eqpV09Kuc_o" title="European Robotics Forum 2022: The Franka Emika Hackathon Manipulation Challenge" />
@@ -53,7 +56,7 @@ const metadata = {
 
   <Features2
     title="About the competition"
-    subtitle="From Franka Emika: &quotThe European Robotics Forum 2022 in Rotterdam, NL is the most influential meeting of the robotics community in Europe - and therefore a perfect fit for our Franka Emika Robot! We really enjoyed engaging with local university students, as we hosted the Tactile Manipulation Benchmark Hackathon Challenge. Robotics up close, that's how we like to inspire to the engineers and researchers from tomorrow! Congrats to TU Delft for mastering the challenge!&quot"
+    subtitle="Robotics and automation promise to alleviate repetitive, dull, dirty, and dangerous tasks but often require an expertly engineered deployment to operate in the real-world. Versatile skills allow machines to operate autonomously and for longer periods allowing them to adapt to unforeseen situations which are currently resolved with direct human assistance or teleoperation. If we can program robots to solve problems by leveraging their previous experience, they can operate more independently and potentially be more effective. What should the core curriculum for robots to be successful in the real-world? This is what this event seeks to find out."
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
