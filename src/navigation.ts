@@ -10,7 +10,7 @@ export const headerData = {
           href: getPermalink('/team/giovanni'),
         },
         {
-          text: 'Mox Spahn',
+          text: 'Max Spahn',
           href: getPermalink('/team/max'),
         },
         {
@@ -39,7 +39,7 @@ export const headerData = {
           href: getPermalink('/events/iros2024'),
         },
         {
-          text: 'RoboHouse',
+          text: 'Robots in Business 2024',
           href: getPermalink('/events/robohouse2024'),
         },
       ],
@@ -84,7 +84,7 @@ export const footerData = {
         { text: 'ERF 2022', href: getPermalink('/events/erf2022') },
         { text: 'Robothon 2023', href: getPermalink('/events/robothon2023') },
         { text: 'IROS 2024', href: getPermalink('/events/iros2024') },
-        { text: 'Robohouse', href: getPermalink('/events/robohouse') },
+        { text: 'Robots in Business 2024', href: getPermalink('/events/robohouse2024') },
       ],
     },
     {

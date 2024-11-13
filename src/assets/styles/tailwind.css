@@ -51,6 +51,10 @@
   @apply py-3;
 } */
 
+a.custom-link {
+  @apply text-red-500 hover:underline; /* Example Tailwind utility classes */
+}
+
 #header.expanded nav {
   position: fixed;
   top: 70px;

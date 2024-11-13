@@ -11,10 +11,11 @@ import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
+
 import { YouTube } from 'astro-embed';
 
 const metadata = {
-  title: 'Startup Landing Page',
+  title: 'Hardware Page',
 };
 ---
 
@@ -22,42 +23,56 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="European Robotics Forum 2022"
+    tagline="Hardware: Franka Emika Panda/FR3"
     actions={[
-      { text: 'Learn more', href: 'https://lp.franka.de/news/franka-emika-hosts-hackathon-at-european-robotics-forum-2022' },
+      { text: 'Learn more', href: 'https://franka.de' },
     ]}
   >
     <Fragment slot="title">
-      The <span class="text-accent dark:text-white highlight">Platonics</span>
-      were born and won the first competition
+      The Franka Emika Panda/FR3 is our go-to choice for robot manipulator!
     </Fragment>
 
     <Fragment slot="subtitle">
-      During that competition, the team was able to demonstrate the capabilities
-      of the approach in combination with the hardware. The task consisted of 
-      several insertion tasks and key turning tasks.
+      It offers a easy interface to our control framework and grants us
+      all the flexibility we need for our approach. Its 7 degrees of freedom
+      and joint torque controllers make it the perfect choice for the Platonics.
     </Fragment>
 
-    <Fragment slot="image">
-      <YouTube id="eqpV09Kuc_o" title="European Robotics Forum 2022: The Franka Emika Hackathon Manipulation Challenge" />
-      <style is:inline>
-        lite-youtube {
-          margin: 0 auto;
-          max-width: 100%;
-        }
-      </style>
-    </Fragment>
   </Hero>
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="About the competition"
-    subtitle="From Franka Emika: &quotThe European Robotics Forum 2022 in Rotterdam, NL is the most influential meeting of the robotics community in Europe - and therefore a perfect fit for our Franka Emika Robot! We really enjoyed engaging with local university students, as we hosted the Tactile Manipulation Benchmark Hackathon Challenge. Robotics up close, that's how we like to inspire to the engineers and researchers from tomorrow! Congrats to TU Delft for mastering the challenge!&quot"
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you need for the Platonics approach"
+    subtitle="We use a minimal set of hardware to make our approach as accessible as possible. Here are the key components:"
+    items={[
+      {
+        title: '3D printed fingertips',
+        description:
+          'Our controllers are designed to be safe to work with, even in close proximity to humans <a href="~/assets/designs/finger_tips.STL" class="custom-link" download>Download the STL file</a>.',
+        icon: 'tabler:hand-finger',
+      },
+      {
+        title: "3D printed camera mount",
+        description:
+          'The camera mount allows seemless integration of the camera with the robot manipulator <a href="~/assets/designs/Camera_mount_realsense.STL" class="custom-link" download>Download the STL file</a>.',
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Realtime Control Hardware',
+        description:
+          'We use a affordable Intel NUC to run our control software and communicate with the robot manipulator. <a href="https://www.amazon.com/Geekplus-NUC12WSHi7-i7-1260P-Graphics-Thunderbolt/dp/B0BJ6TWB8X/ref=sr_1_1?sr=8-1" class="custom-link" target="_blank">Learn more</a>.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Camera',
+        description:
+          'We use the Intel RealSense D405i camera for our vision tasks. <a href="https://www.intelrealsense.com/depth-camera-d405/" class="custom-link" target="_blank">Learn more</a>.',
+        icon: 'tabler:camera',
+      },
+    ]}
+  />
 
 </Layout>
