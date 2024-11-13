@@ -24,13 +24,7 @@ const metadata = {
         { text: 'Home', href: '#' },
         { text: 'About', href: '#about' },
         { text: 'Resume', href: '#resume' },
-        { text: 'Github', href: 'https://github.com/franzesegiovanni' },
-      ]}
-      actions={[
-        {
-          text: 'Website',
-          href: 'https://franzesegiovanni.github.io/aboutme/',
-        },
+        { text: 'Github', href: 'https://github.com/MRamirez25' },
       ]}
       isSticky
       showToggleTheme
@@ -41,15 +35,15 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Giovanni Franzese"
-    tagline="Manipulation Researcher (Ph.D.)"
+    title="Mariano Ramirez Montero"
+    tagline="PhD Candidate"
     actions={[{ variant: 'primary', text: 'Contact me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      My name is Giovanni and I am a Postdoctoral researcher in Robotics @ TU Delft in the Netherlands. I am currently seeking
-      for a Research Scientist position in Robotics and Machine Learning. I have more than 5 years of experience in Robotics
-      and Machine Learning, with a focus on robot manipulation, learning from
-      human demonstration, and Bayesian machine learning
+      I'm Mariano, a PhD candidate at the Cognitive Robotics department of the TU Delft in the Netherlands.
+      I have experience with manipulation and imitation learning, and my current line of work aims to use
+      non-linear dynamical systems as a tool in machine learning algorithms. For example, in a reservoir computing
+      setting, but also as a useful prior to structure latent spaces to learn complex dynamics. 
     </Fragment>
   </Hero>
 
@@ -60,21 +54,11 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon:
-        'tabler:brand-google',
-        callToAction: {
-          target: '_blank',
-          text:
-          'Google Scholar',
-          href: 'https://scholar.google.com/citations?hl=nl&user=F1weUA8AAAAJ',
-        },
-      },
-      {
         icon: 'tabler:brand-linkedin',
         callToAction: {
           target: '_blank',
           text: 'Behance',
-          href: 'https://www.linkedin.com/in/giovanni-franzese/',
+          href: 'https://www.linkedin.com/in/mariano-ram%C3%ADrez-montero-5a5427206/',
         },
       },
       {
@@ -82,15 +66,10 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Github',
-          href: 'https://github.com/franzesegiovanni',
+          href: 'https://github.com/MRamirez25',
         },
       },
     ]}
-    image={{
-      src: '~/assets/images/giovanni.png',
-      alt: 'Colorful Image',
-      loading: 'eager',
-    }}
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
@@ -110,7 +89,7 @@ const metadata = {
         details of typography, or the vibrant hues of nature during my outdoor escapades.
       </p>
       <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+      <p>Feel free to take a look at my Github and LinkedIn:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -122,115 +101,24 @@ const metadata = {
 
   <Steps
     id="resume"
-    title="Work experience"
-    items={[
-      {
-        title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    id="resume"
     title="Education"
     items={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        title: `MSc in Robotics <br /> <span class="font-normal">Delft University of Technology</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
         icon: 'tabler:school',
       },
       {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        title: `BSc in Aerospace Engineering <br /> <span class="font-normal">Delft University of Technology</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `International Baccalaureate <br /> <span class="font-normal">United World College Changshu China</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
         icon: 'tabler:school',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
-    columns={3}
-    defaultIcon="tabler:point-filled"
-    items={[
-      {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
-      },
-      {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
-      },
-      {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
-      },
-      {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
-      },
-      {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
-      },
-      {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    title="Let's teach robots together"
-    subtitle="Ready to teach a robot yourself?"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Contact me',
-        href: getPermalink('/contact#form'),
-      },
-    ]}
   />
 
   <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
-    id="blog"
-    title="Explore my insightful articles on my blog"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
 </Layout>
