@@ -1,4 +1,6 @@
 name: Deploy Astro site to GitHub Pages
+permissions:
+  contents: write
 
 on:
   push:
