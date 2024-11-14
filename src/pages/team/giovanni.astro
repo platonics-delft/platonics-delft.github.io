@@ -41,15 +41,12 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Giovanni Franzese"
-    tagline="Manipulation Researcher (Ph.D.)"
+    title="Giovanni Franzese, Ph.D."
+    tagline="Manipulation Researcher"
     actions={[{ variant: 'primary', text: 'Contact me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      My name is Giovanni and I am a Postdoctoral researcher in Robotics @ TU Delft in the Netherlands. I am currently seeking
-      for a Research Scientist position in Robotics and Machine Learning. I have more than 5 years of experience in Robotics
-      and Machine Learning, with a focus on robot manipulation, learning from
-      human demonstration, and Bayesian machine learning
+       Giovanni is a Postdoctoral researcher in Robotics at TU Delft in the Netherlands. He obtained his Ph.D. in 2024 from TU Delft with the thesis named Uncertainty-aware Interactive Imitation Learning for Robot Manipulation. During his Ph.D. he focused on estimation and rejection of uncertainty in robot learning and algorithm design to allow robot to fastly learn from human demonstration and corrections. 
     </Fragment>
   </Hero>
 
@@ -93,16 +90,9 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About Giovanni</h2>
       <p>
-        I am passionate about developing algorithms that enable robots to learn complex manipulation tasks from human
-        demonstration and feedback. I have experience in programming real robot controllers and fitting machine learning
-        models.My controllers for Franka-Emika robots are deployed in my different university around the world and supporting
-        research of scientistis and students. I am a team player and I enjoy working in a multidisciplinary environment. I am
-        looking for a position where I can apply my skills and knowledge to develop innovative solutions for real-world problems
-        in robotics and machine learning.
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+He is passionate about developing algorithms that enable robots to learn complex manipulation tasks from human demonstration and feedback. With experience in programming real robot controllers and training machine learning models, he has deployed controllers for Franka Emika robots in universities worldwide, supporting research for scientists and students. He advocates open science and he is committed for tackling the complex problem of robot manipulation to improve the quality of life of people.
       </p>
       <br />
     </Fragment>
@@ -112,109 +102,83 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
+<!-- Steps Widget ****************** -->
 
-  <Steps
-    id="resume"
-    title="Work experience"
-    items={[
-      {
-        title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
+<Steps
+  id="resume"
+  title="Work experience"
+  items={[
+    {
+      title: 'Postdoctoral Researcher <br /> <span class="font-normal">Delft University of Technology, Delft, Netherlands</span> <br /> <span class="text-sm font-normal">Sep. 2023 - Present</span>',
+      description: `Mentored by Cosimo Della Santina. Part of the <a href="https://nxtgenhightech.nl/en/agrifood/">NXTGEN high-tech agri-food Project</a>. <br /> Managed the Franka Emika lab of Cognitive Robotics at TU Delft, exploring learning-based methods for low-cost, soft, and deformable hardware, with a focus on generalizing manipulation skills in tomato plant de-leafing.`,
+      icon: 'tabler:briefcase',
+    },
+    {
+      title: 'Team Leader, PLATOnics Team <br /> <span class="font-normal">Delft University of Technology, Delft, Netherlands</span> <br /> <span class="text-sm font-normal">2023 - 2024</span>',
+      description: `Led PLATOnics team for the EUrobin Manipulation Skill Versatility Challenge 2024 and the Robothon Manipulation Challenge 2023. <br /> Developed a solution based on human demonstrations, awarded as the best versatility solution at IROS 2024.`,
+      icon: 'tabler:briefcase',
+    },
+    {
+      title: 'Visiting Ph.D. in Statistical Machine Learning <br /> <span class="font-normal">University College London (UCL), London, United Kingdom</span> <br /> <span class="text-sm font-normal">Sep. 2022 - Feb 2023</span>',
+      description: `Mentored by Marc Deisenroth. Focused on variational inference learning methods for calibrated classification on high-dimensional inputs, including images and graphs.`,
+      icon: 'tabler:briefcase',
+    },
+    {
+      title: 'Ph.D. in Interactive Imitation Learning for Robotics <br /> <span class="font-normal">Delft University of Technology, Delft, Netherlands</span> <br /> <span class="text-sm font-normal">June 2019 - June 2023</span>',
+      description: `Thesis: "Uncertainty-aware Interactive Imitation Learning for Robot Manipulation." Mentored by Jens Kober and Luka Peternel. Supported by ERC grant TERI (Teaching Robot Interactively).`,
+      icon: 'tabler:briefcase',
+    },
+    {
+      title: 'Lecturer for MSc Course on Intelligent Control Systems <br /> <span class="font-normal">Delft University of Technology, Delft, Netherlands</span> <br /> <span class="text-sm font-normal">2022-24</span>',
+      description: `Lectured on Gaussian Processes for Robotics and Control.`,
+      icon: 'tabler:briefcase',
+    },
+  ]}
+  classes={{ container: 'max-w-3xl' }}
+/>
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    id="resume"
-    title="Education"
-    items={[
-      {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
-        icon: 'tabler:school',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
+<!-- Steps Widget ****************** -->
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
-    title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
-    columns={3}
-    defaultIcon="tabler:point-filled"
-    items={[
-      {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
-      },
-      {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
-      },
-      {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
-      },
-      {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
-      },
-      {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
-      },
-      {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
-    ]}
-  />
+<Features3
+  title="Skills"
+  subtitle="A snapshot of the skills and expertise I bring to robotics and machine learning."
+  columns={3}
+  defaultIcon="tabler:point-filled"
+  items={[
+    {
+      title: 'Robot Control',
+      description: 'Variable Impedance Control for Single and Bimanual Manipulation. Safe human-robot interaction.',
+    },
+    {
+      title: 'Robot Learning',
+      description: 'Low-level and high-level skill learning from human interactive demonstrations.',
+    },
+    {
+      title: 'Machine Learning',
+      description: 'Experience in Gaussian Process, Epistemic Uncertainty Estimation, Calibration, and Variational Inference.',
+    },
+  ]}
+/>
+
 
   <!-- Content Widget **************** -->
 
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    title="Let's teach robots together"
-    subtitle="Ready to teach a robot yourself?"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Contact me',
-        href: getPermalink('/contact#form'),
-      },
-    ]}
-  />
+<CallToAction
+  title="Let's teach robots together"
+  subtitle="Ready to make robot do great things? Let's work together to make it happen. "
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Contact me',
+      href: 'mailto:g.franzese@tudelft.nl?subject=Let\'s%20collaborate&body=Hi%20there!',
+    },
+  ]}
+/>
 
   <!-- BlogLatestPost Widget **************** -->
 
