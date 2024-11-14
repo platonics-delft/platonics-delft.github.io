@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://platonics-delft.github.io/sitemap-index.xml
