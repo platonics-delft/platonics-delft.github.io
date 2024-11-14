@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Startup Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="International Conference on Intelligent Robots and Systems, AbuDabi 2024"
+    actions={[
+      { text: 'Learn more', href: 'https://sites.google.com/view/eurobin-msvc/' },
+    ]}
+    image={{ src: '~/assets/images/msvc_team_picture.jpg', alt: 'European Robotics Forum 2022' }}
+  >
+    <Fragment slot="title">
+      The <span class="text-accent dark:text-white highlight">Platonics</span>
+      won the euROBIN Manipulation Skill Versatility Challenge
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      The team from TU Delft won the competition with their innovative approach to the challenge using the Franka Emika Panda robot. The human friendly controller and approach to robot teaching allowed to quickly adapt to skill to unknown tasks live during the competition. The team proposed a novel approach to increase reliability of the skill execution by combining vision, tactile and proproceptive sensing while being able to adapt to different tasks thanks to human demonstrations and corrections. 
+
+    </Fragment>
+
+    <!-- insert image -->
+
+    <Fragment slot="image">
+      <YouTube id="eqpV09Kuc_o" title="European Robotics Forum 2022: The Franka Emika Hackathon Manipulation Challenge" />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="About the competition"
+    subtitle="Robotics and automation promise to alleviate repetitive, dull, dirty, and dangerous tasks but often require an expertly engineered deployment to operate in the real-world. Versatile skills allow machines to operate autonomously and for longer periods allowing them to adapt to unforeseen situations which are currently resolved with direct human assistance or teleoperation. If we can program robots to solve problems by leveraging their previous experience, they can operate more independently and potentially be more effective. What should the core curriculum for robots to be successful in the real-world? This is what this event seeks to find out."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+</Layout>

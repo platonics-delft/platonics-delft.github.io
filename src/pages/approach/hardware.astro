@@ -1,0 +1,78 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Hardware Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Hardware: Franka Emika Panda/FR3"
+    actions={[
+      { text: 'Learn more', href: 'https://franka.de' },
+    ]}
+  >
+    <Fragment slot="title">
+      The Franka Emika Panda/FR3 is our go-to choice for robot manipulator!
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      It offers a easy interface to our control framework and grants us
+      all the flexibility we need for our approach. Its 7 degrees of freedom
+      and joint torque controllers make it the perfect choice for the Platonics.
+    </Fragment>
+
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you need for the Platonics approach"
+    subtitle="We use a minimal set of hardware to make our approach as accessible as possible. Here are the key components:"
+    items={[
+      {
+        title: '3D printed fingertips',
+        description:
+          'Our controllers are designed to be safe to work with, even in close proximity to humans <a href="~/assets/designs/finger_tips.STL" class="custom-link" download>Download the STL file</a>.',
+        icon: 'tabler:hand-finger',
+      },
+      {
+        title: "3D printed camera mount",
+        description:
+          'The camera mount allows seemless integration of the camera with the robot manipulator <a href="~/assets/designs/Camera_mount_realsense.STL" class="custom-link" download>Download the STL file</a>.',
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Realtime Control Hardware',
+        description:
+          'We use a affordable Intel NUC to run our control software and communicate with the robot manipulator. <a href="https://www.amazon.com/Geekplus-NUC12WSHi7-i7-1260P-Graphics-Thunderbolt/dp/B0BJ6TWB8X/ref=sr_1_1?sr=8-1" class="custom-link" target="_blank">Learn more</a>.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Camera',
+        description:
+          'We use the Intel RealSense D405i camera for our vision tasks. <a href="https://www.intelrealsense.com/depth-camera-d405/" class="custom-link" target="_blank">Learn more</a>.',
+        icon: 'tabler:camera',
+      },
+    ]}
+  />
+
+</Layout>

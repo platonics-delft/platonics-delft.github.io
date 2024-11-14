@@ -1,0 +1,75 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Startup Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Kinesthetic Teaching"
+    actions={[
+      { text: 'Code', href: 'https://github.com/platonics-delft/platonics_robot_teaching' },
+    ]}
+  >
+    <Fragment slot="title">
+      Kinethetic Teaching is the approach of moving the robot by hand to show
+      the robot how to accomplish a task.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Humans outperform robots mainly by their cognitive abilites in
+      understanding tasks, the robot at hand and the limitation of the
+      combination. Kinesthetic teaching is the process of moving the robot
+      by hand to demonstrate how to accomplish a task.
+    </Fragment>
+
+    <Fragment slot="image">
+      <video class="w-full h-auto" controls autoplay muted>
+        <source src="/videos/kinesthetic_teaching.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+
+  <Features2
+    isReversed
+    tagline="Kinesthetic Teaching"
+    title="Passing human understanding implicitly!"
+    items={[
+      {
+        title: 'Complicated behaviors can easily be programmed',
+        description:
+          'some more explaination',
+      },
+      {
+        title: 'Usable for non-expert users',
+        description:
+          'Some more explaination',
+      },
+      {
+        title: 'Continues improvement during deployment',
+        description:
+          'some more details',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+
+</Layout>

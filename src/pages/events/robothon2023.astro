@@ -1,0 +1,61 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Startup Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Robothon 2023"
+    actions={[
+      { text: 'Learn more', href: 'https://automatica-munich.com/en/munich-i/robothon/' },
+    ]}
+  >
+    <Fragment slot="title">
+      The <span class="text-accent dark:text-white highlight">Platonics</span>
+      completed the Robothon Challenge in 2023.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      The Robothon Challenge® is a competition that brings together the best minds in robotics to solve real-world problems. The competition is open to students, researchers, and professionals from around the world. The goal of the competition is to develop innovative solutions to complex problems using robotics and automation technologies.
+    </Fragment>
+
+    <Fragment slot="image">
+      <YouTube id="tOC8P5Wv9Rk" title="Robothon Challenge® 2023: PLATOnics (TU Delft, NL) " />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+  
+<Features2
+  title="Result"
+  subtitle="Despite being the first time in the competition, the team finished all the tasks and placed 8th among the 20 selected teams."
+
+</Features2>
+
+
+
+
+</Layout>

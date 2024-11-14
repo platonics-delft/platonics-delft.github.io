@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import platonicsLogo from '~/assets/images/platonics_logo_3.png'; // Import the image
+
+
+const metadata = {
+  title: 'Platonics - Versatile Robotic solutions',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Platonics Code',
+        href: 'https://github.com/platonics-delft',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: platonicsLogo, alt: 'Platonics Logo' }}
+  >
+    <Fragment slot="title">
+      Platonics - bringing versatility to your robotic dreams.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Platonics</span> is the team behind the winning approach for the <a href="https://www.eurobin-project.eu/index.php/default-event/87-manipulation-skill-versatility-challenge-iros-2024-in-abu-dhabi-october-15-17-2024">euROBIN Manipulation Skill Versatility Challenge
+        2024</a>.
+      </span>
+      Our philosophy builds around kinesthetic teaching of affordable hardware, because
+      we belive that robots must constantly be improved by humans.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with the Platonics approach"
+    subtitle="Our approach to versatile robotic manipulation has led to winning multiple robotic competitions. This is possible to our philosophy and choice of hardware"
+    items={[
+      {
+        title: 'Safety through compliant control',
+        description:
+          'Our controllers are designed to be safe to work with, even in close proximity to humans.',
+        icon: 'tabler:shield-half',
+      },
+      {
+        title: 'Kinesthetic Teaching',
+        description:
+          'Our robots are designed to be taught by humans, not programmed by them.',
+        icon: 'tabler:friends',
+      },
+      {
+        title: 'Affordable Hardware',
+        description:
+          'Our robots are built using affordable hardware, making them accessible to everyone.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Graphical User Interface',
+        description:
+          'Our robots are controlled using a graphical user interface, making them easy to use for non-expert users.',
+        icon: 'tabler:accessible',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Get your robot automate your tasks in 3 steps",
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Install Robot</span>',
+        description:
+          "Install the robot in the designated workspace and connect it to the NUC computer. Ensure all components are connected to the same local network.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Install software</span>',
+        description:
+          "Install all the necessary software. Ideally, here we need a simple script.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Launch Platonics GUI</span>',
+        description:
+          'Launch the Platonics graphical user interface and start the robot.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        description:
+          'Start teaching the robot the tasks you want to automate.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Platonics Code',
+        href: 'https://github.com/platonics-delft',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Platonics - your solution to automation
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Don't waste more time browsing this website and get in touch with our
+      solution. It's all out there!
+    </Fragment>
+  </CallToAction>
+</Layout>
