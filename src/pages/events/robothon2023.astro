@@ -2,16 +2,18 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import Features2 from '~/components/widgets/Features2.astro';
 import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
 import { YouTube } from 'astro-embed';
+import team2023 from '~/assets/images/platonics_2023_team.jpeg'; // Import the image
 
 const metadata = {
   title: 'Startup Landing Page',
@@ -47,13 +49,22 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- Features2 Widget ************** -->
-  
-<Features2
-  title="Result"
-  subtitle="Despite being the first time in the competition, the team finished all the tasks and placed 8th among the 20 selected teams."
+  <Hero2
+    tagline="Team"
+    actions={[
+      { text: 'Learn more about Alumni', href: '/team/alumni' },
+    ]}
+    image={{ src: team2023, alt: 'Robothon 2023 Team' }}
+  >
 
-</Features2>
+    <Fragment slot="subtitle">
+      Despite being the first time in the competition, the team finished all the tasks and placed 8th among the 20 selected teams.
+    </Fragment>
+
+
+  </Hero2>
+
+  
 
 
 
